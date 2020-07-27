@@ -78,10 +78,10 @@ function showTemp(response) {
   forcastElement.innerHTML = `${forcast}`;
   let wind = Math.round(response.data.wind.speed * 3);
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${wind}`;
+  windElement.innerHTML = `wind: ${wind} mph`;
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${humidity}%`;
+  humidityElement.innerHTML = `humidity: ${humidity}%`;
 }
 
 function getLocation() {
