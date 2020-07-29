@@ -53,9 +53,9 @@ h1 {
 .tempUnit {
   color: Black;
   font-family: "Orbitron", sans-serif;
+  cursor: default;
 }
 .tempUnit:hover {
-  cursor: pointer;
   color: grey;
 }
 .days {
