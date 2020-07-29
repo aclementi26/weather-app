@@ -57,6 +57,7 @@ h1 {
 }
 .tempUnit:hover {
   color: grey;
+  text-decoration: none;
 }
 .days {
   font-family: "Orbitron", sans-serif;
