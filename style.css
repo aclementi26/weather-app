@@ -83,6 +83,7 @@ h1 {
   list-style: none;
   top: 30px;
   font-family: "Orbitron", sans-serif;
+  text-transform: capitalize;
 }
 .container {
   display: block;
