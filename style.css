@@ -2,6 +2,8 @@
   margin: 20px 0;
   position: relative;
   right: -5px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 50px;
 }
 .frame {
   display: block;
@@ -34,6 +36,8 @@ h1 {
   float: right;
   right: 10px;
   margin: 20px 0;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 50px;
 }
 .location:hover {
   background-color: white;
