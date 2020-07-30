@@ -86,20 +86,41 @@ h1 {
   font-family: "Orbitron", sans-serif;
   text-transform: capitalize;
 }
-.container {
+.weather-forecast h2 {
+  position: relative;
+  right: -15px;
+  font-size: 10;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+  top: 20px;
+  left: 30px;
+}
+.weatherPic {
   display: block;
   margin: 0 auto;
+  height: 48px;
+  width: 48px;
   position: relative;
-  top: 40px;
-  right: -15px;
-  font-size: 15px;
-  border: black;
-  font-family: "Courier New", Courier, monospace;
+  right: -30px;
+  top: 20px;
+}
+.forecast-temp {
+  text-align: center;
+  font-size: 13px;
+  white-space: nowrap;
+  position: relative;
+  left: 30px;
+  margin: 3px;
+  top: 20px;
+  background-color: white;
 }
 .pic {
   width: 200px;
   display: block;
   margin: 0 auto;
+  border-radius: 10px;
 }
 .website {
   display: block;
@@ -107,7 +128,7 @@ h1 {
   position: relative;
   top: 115px;
   float: left;
-  right: -350px;
+  right: -20px;
   font-size: 15px;
 }
 .icon {

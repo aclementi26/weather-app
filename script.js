@@ -22,8 +22,21 @@ function changeDate() {
   days.innerHTML = ` ${day} ${hour}: ${minute}`;
 }
 changeDate();
-//Search a city and change the heading
-//week 5 hw: added the api
+function displayForecast(response) {
+  console.log(repsonse);
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  forecastElement.innerHTML = `<div class="col-2">
+      <h2>
+        12:00
+      </h2>
+      <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png">
+     <div class="forecast-temp">
+       <strong> ${forecast.main.temp_max}</strong>|65
+     </div>
+    </div>`;
+}
+
 function searchCity(event) {
   event.preventDefault();
   let citySearch = document.querySelector("#city-search");
@@ -32,11 +45,13 @@ function searchCity(event) {
   let apiKey = "c8f755d5ee590b2c42d00344493b2994";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch.value}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(showTemp);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 let citySearchForm = document.querySelector("#search-form");
 citySearchForm.addEventListener("submit", searchCity);
 
-//Bonus to change the temp
 function tempFarenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
@@ -57,7 +72,6 @@ function tempCelius(event) {
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", tempCelius);
 
-//week 5 homework
 function getCurrentLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
