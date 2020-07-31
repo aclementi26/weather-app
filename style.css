@@ -20,13 +20,7 @@ h1 {
   color: white;
 }
 .info {
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-  background-blend-mode: screen;
+  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
 
   width: 500px;
   height: 400px;
@@ -87,24 +81,16 @@ h1 {
   text-transform: capitalize;
 }
 .weather-forecast h2 {
-  position: relative;
-  right: -15px;
   font-size: 10;
   text-align: center;
   height: 15px;
-  line-height: 15px;
   padding-top: 7px;
-  top: 20px;
-  left: 30px;
 }
 .weatherPic {
   display: block;
   margin: 0 auto;
   height: 48px;
   width: 48px;
-  position: relative;
-  right: -30px;
-  top: 20px;
 }
 .forecast-temp {
   text-align: center;
