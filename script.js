@@ -23,16 +23,19 @@ function changeDate() {
 }
 changeDate();
 function displayForecast(response) {
-  console.log(repsonse);
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   forecastElement.innerHTML = `<div class="col-2">
       <h2>
         12:00
       </h2>
-      <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png">
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png"
      <div class="forecast-temp">
-       <strong> ${forecast.main.temp_max}</strong>|65
+       <strong> ${Math.round(forecast.main.temp_max)}</strong> ${Math.round(
+    forecast.main.temp_min
+  )}
      </div>
     </div>`;
 }
