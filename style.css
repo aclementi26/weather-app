@@ -9,8 +9,7 @@
   display: block;
   margin: 0 auto;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
-  height: 400px;
-  width: 500px;
+  max-width: 800px;
   margin: 10px auto;
 }
 h1 {
@@ -22,8 +21,7 @@ h1 {
 .info {
   background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
 
-  width: 500px;
-  height: 400px;
+  max-width: 800px;
 }
 .location {
   position: relative;
@@ -80,11 +78,12 @@ h1 {
   font-family: "Orbitron", sans-serif;
   text-transform: capitalize;
 }
-.weather-forecast h2 {
-  font-size: 10;
+.weather-forecast {
+  font-size: 10px;
   text-align: center;
-  height: 15px;
-  padding-top: 7px;
+  position: relative;
+  float: right;
+  right: -30px;
 }
 .weatherPic {
   display: block;
@@ -94,7 +93,7 @@ h1 {
 }
 .forecast-temp {
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   white-space: nowrap;
   position: relative;
   left: 30px;
@@ -107,15 +106,7 @@ h1 {
   margin: 0 auto;
   border-radius: 10px;
 }
-.website {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 115px;
-  float: left;
-  right: -20px;
-  font-size: 15px;
-}
+
 .icon {
   width: 50px;
 }
