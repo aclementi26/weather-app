@@ -84,6 +84,7 @@ h1 {
   position: relative;
   float: right;
   right: -30px;
+  top: 20px;
 }
 .weatherPic {
   display: block;
@@ -100,6 +101,7 @@ h1 {
   margin: 3px;
   top: 20px;
 }
+
 .pic {
   width: 200px;
   display: block;
@@ -109,4 +111,8 @@ h1 {
 
 .icon {
   width: 50px;
+}
+.website {
+  position: relative;
+  top: 40px;
 }
