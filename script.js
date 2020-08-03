@@ -19,7 +19,7 @@ function changeDate() {
   if (minute < 10) {
     minute = `0 ${minute}`;
   }
-  days.innerHTML = ` ${day} ${hour}: ${minute}`;
+  days.innerHTML = ` Last update: ${day} ${hour}: ${minute}`;
 }
 changeDate();
 function formatHours(timestamp) {
@@ -116,9 +116,9 @@ function showTemp(response) {
   let location = response.data.name;
   let h1 = document.querySelector("#city");
   h1.innerHTML = `${location}`;
-  let forcast = response.data.weather[0].description;
-  let forcastElement = document.querySelector(".weatherCondition");
-  forcastElement.innerHTML = `${forcast}`;
+  let forecast = response.data.weather[0].description;
+  let forecastElement = document.querySelector(".weatherCondition");
+  forecastElement.innerHTML = `${forecast}`;
   let wind = Math.round(response.data.wind.speed);
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `wind: ${wind} mph`;
@@ -128,7 +128,7 @@ function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
