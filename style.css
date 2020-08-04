@@ -1,27 +1,21 @@
+.frame {
+  display: block;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+  max-width: 900px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.form {
+  height: 500px;
+  width: 400px;
+}
 .search {
   margin: 20px 0;
   position: relative;
   right: -5px;
   font-family: "Courier New", Courier, monospace;
   border-radius: 50px;
-}
-.frame {
-  display: block;
-  margin: 0 auto;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  max-width: 800px;
-  margin: 10px auto;
-}
-h1 {
-  font-family: "Orbitron", sans-serif;
-  position: relative;
-  right: -5px;
-  color: white;
-}
-.info {
-  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
-
-  max-width: 800px;
 }
 .location {
   position: relative;
@@ -35,12 +29,27 @@ h1 {
   background-color: white;
   color: black;
 }
-.temperature {
-  color: Black;
-  margin: 2px auto;
+h1 {
   font-family: "Orbitron", sans-serif;
-
+  text-align: center;
+  color: black;
+}
+.days {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  color: black;
+}
+.icon {
+  display: block;
+  margin: 0 auto;
+}
+.temperature {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
   font-size: 30px;
+}
+.tempUnit.active {
+  color: white;
 }
 .tempUnit {
   color: Black;
@@ -51,68 +60,26 @@ h1 {
   color: grey;
   text-decoration: none;
 }
-.days {
-  font-family: "Orbitron", sans-serif;
-  position: relative;
-  float: right;
-  top: 15px;
-  right: 15px;
-  color: white;
+.card {
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
 }
-.line {
-  width: 500px;
-  position: relative;
-  top: -100px;
-}
-.dash {
-  font-size: 30px;
-}
-.container {
-  position: relative;
-  top: 30px;
-}
+
 .weatherCondition {
-  font-size: 30;
+  font-size: 15 px;
   list-style: none;
+  text-align: center;
   top: 30px;
   font-family: "Orbitron", sans-serif;
   text-transform: capitalize;
 }
 .weather-forecast {
-  font-size: 10px;
+  font-size: 20px;
   text-align: center;
-  position: relative;
-  float: right;
-  right: -30px;
-  top: 20px;
-}
-.weatherPic {
-  display: block;
-  margin: 0 auto;
-  height: 48px;
-  width: 48px;
-}
-.forecast-temp {
-  text-align: center;
-  font-size: 15px;
-  white-space: nowrap;
-  position: relative;
-  left: 30px;
-  margin: 3px;
-  top: 20px;
-}
-
-.pic {
-  width: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-.icon {
-  width: 50px;
+  top: 10px;
+  font-family: "Orbitron", sans-serif;
 }
 .website {
-  position: relative;
-  top: 40px;
+  text-align: center;
 }
