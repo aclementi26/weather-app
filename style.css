@@ -55,6 +55,14 @@ h1 {
   color: Black;
   font-family: "Orbitron", sans-serif;
   cursor: default;
+  font-size: 15px;
+  position: relative;
+  top: -15px;
+}
+.dash {
+  position: relative;
+  top: -15px;
+  font-size: 15px;
 }
 .tempUnit:hover {
   color: grey;
