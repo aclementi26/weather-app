@@ -10,6 +10,22 @@ function changeDate() {
     "Friday",
     "Saturday",
   ];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let date = now.getDate();
+  let month = months[now.getMonth()];
   let day = dayTime[now.getDay()];
   let hour = now.getHours();
   let minute = now.getMinutes();
@@ -19,7 +35,7 @@ function changeDate() {
   if (minute < 10) {
     minute = `0 ${minute}`;
   }
-  days.innerHTML = ` Last update: ${day} ${hour}: ${minute}`;
+  days.innerHTML = ` Last update: ${month} ${date}, ${day} ${hour}: ${minute}`;
 }
 changeDate();
 function formatHours(timestamp) {
@@ -83,6 +99,8 @@ citySearchForm.addEventListener("submit", submitCity);
 function tempFarenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperature = temp.innerHTML;
   let newTemp = (temperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(newTemp);
@@ -93,10 +111,13 @@ fahrenheitLink.addEventListener("click", tempFarenheit);
 function tempCelius(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperature = temp.innerHTML;
   let newTemp = ((temperature - 32) * 5) / 9;
   temp.innerHTML = Math.round(newTemp);
 }
+let fahrenheitTemperature = null;
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", tempCelius);
 
