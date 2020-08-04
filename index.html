@@ -1,92 +1,106 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Weather App</title>
     <meta charset="UTF-8" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Orbitron:wght@600&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Orbitron:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
-   
-    
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="frame">
-        <button class="location">
-            Current Location
-        </button>
-    <form id="search-form">
-        <input class="search" type="text" placeholder=" Enter a City" id="city-search" />
-    
-    </form>
+      <button class="location">
+        Current Location
+      </button>
+      <form id="search-form">
+        <input
+          class="search"
+          type="text"
+          placeholder=" Enter a City"
+          id="city-search"
+        />
+      </form>
+      <h1 id="city">
+        Philadelphia
+      </h1>
+      <p class="days">
+        Wednesday
+        <br />
 
-        <p class="days">
-            Wednesday
-            <br />
+        Today
+      </p>
+      <img
+        src="http://openweathermap.org/img/wn/01d@2x.png"
+        class="icon"
+        id="icon"
+      />
+      <p class="temperature">
+        <span id="temp">85</span>°
+        <span class="unit">
+          <a href="#" class="tempUnit" id="fahrenheit-link"> F</a>
+        </span>
+        <span class="dash">
+          |
+        </span>
 
-            Today
-        </p>
-
-        <h1 id="city">
-            Philadelphia
-        </h1>
-     
-        <div class="info">
-            <div class=row>
-                <div class="col-6">
-                    <p class="temperature">
-                        <img src="http://openweathermap.org/img/wn/01d@2x.png"  class="icon" id="icon"/>
-                        <span id="temp">85</span>°
-                        <span class="unit">
-                            <a href="#" class="tempUnit" id="fahrenheit-link"> F</a>
-                        </span>
-                        <span class="dash">
-                            |
-                        </span>
-
-                        <span class="unit">
-                            <a href="#" class="tempUnit" id="celsius-link"> C</a>
-                        </span>
-                    </p>
-                </div>
-                
-                 <div class="col-6">
-                    <ul>
-                        <li class="weatherCondition">
-                            Forecast
-                        </li>
-                        <li class="weatherCondition" id="wind">
-                            Wind
-                        </li>
-                        <li class="weatherCondition" id="humidity">
-                            Humidity
-                        </li>
-                    </ul>
-                </div>
-            
-                <img src="image/clock.svg"class="pic"id="image"/>
-            <div class="row weather-forecast" id="forecast">
-            <div class="col-2">
-                <h2>
-                    12:00 
-                </h2>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" class="weatherPic" />
-            
-                </div>
-                </div>
-                
-        
-         <p class="website">
-        <a href="https://github.com/aclementi26/weather-app" target="_blank">Open-source code</a> by Alison Clementi
+        <span class="unit">
+          <a href="#" class="tempUnit" id="celsius-link" class="active"> C</a>
+        </span>
+      </p>
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <li class="weatherCondition">
+                  Forecast
+                </li>
+              </div>
+              <div class="col-sm">
+                <li class="weatherCondition" id="wind">
+                  Wind
+                </li>
+              </div>
+              <div class="col-sm">
+                <li class="weatherCondition" id="humidity">
+                  Humidity
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row weather-forecast" id="forecast">
+        <div class="col-2">
+          <h2>
+            12:00
+          </h2>
+          <img
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            class="weatherPic"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="website">
+      <a href="https://github.com/aclementi26/weather-app" target="_blank"
+        >Open-source code</a
+      >
+      by Alison Clementi
     </p>
-   
-    <script src="script.js"></script>
-</body>
 
+    <script src="script.js"></script>
+  </body>
 </html>
