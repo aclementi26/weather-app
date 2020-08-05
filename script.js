@@ -105,6 +105,7 @@ function tempFarenheit(event) {
   let newTemp = (temperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(newTemp);
 }
+let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", tempFarenheit);
 
@@ -117,7 +118,7 @@ function tempCelius(event) {
   let newTemp = ((temperature - 32) * 5) / 9;
   temp.innerHTML = Math.round(newTemp);
 }
-let fahrenheitTemperature = null;
+
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", tempCelius);
 
