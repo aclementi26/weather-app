@@ -102,6 +102,8 @@ function tempFarenheit(event) {
   let temperature = temp.innerHTML;
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
+  celsiusLink.addEventListener("click", tempCelsius);
+  fahrenheitLink.removeEventListener("click", tempFahrenheit);
   let newTemp = (temperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(newTemp);
 }
