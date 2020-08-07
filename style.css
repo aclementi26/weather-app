@@ -87,9 +87,6 @@ h1 {
 .tempUnit.active {
   color: blue;
   cursor: default;
-}
-.tempUnit.active {
-  color: blue;
   text-decoration: none;
 }
 
