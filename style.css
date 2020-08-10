@@ -55,45 +55,37 @@ h1 {
   text-align: center;
   color: black;
   text-transform: capitalize;
+  position: relative;
+  top: -10px;
 }
 .icon {
   display: block;
   margin: 0 auto;
   background-color: black;
   border-radius: 50px;
+  position: relative;
+  top: -15px;
 }
 .temperature {
   text-align: center;
   font-family: "Orbitron", sans-serif;
   font-size: 30px;
 }
+
 .active {
   color: black;
-  cursor: default;
-}
-.active:hover {
-  text-decoration: none;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .tempUnit {
   color: Black;
   font-family: "Orbitron", sans-serif;
   cursor: default;
-  font-size: 15px;
   position: relative;
   top: -15px;
   text-decoration: none;
-}
-.tempUnit.active {
-  color: blue;
-  cursor: default;
-  text-decoration: none;
-}
-
-.dash {
-  position: relative;
-  top: -15px;
-  font-size: 15px;
 }
 
 .card {
