@@ -95,8 +95,7 @@ function submitCity(event) {
 }
 let citySearchForm = document.querySelector("#search-form");
 citySearchForm.addEventListener("submit", submitCity);
-
-function tempFarenheit(event) {
+function tempFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
   let temperature = temp.innerHTML;
@@ -107,11 +106,9 @@ function tempFarenheit(event) {
   let newTemp = (temperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(newTemp);
 }
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", tempFarenheit);
-
-function tempCelius(event) {
+fahrenheitLink.addEventListener("click", tempFahrenheit);
+function tempCelsius(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
   let temperature = temp.innerHTML;
@@ -122,9 +119,8 @@ function tempCelius(event) {
   let newTemp = ((temperature - 32) * 5) / 9;
   temp.innerHTML = Math.round(newTemp);
 }
-
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", tempCelius);
+celsiusLink.addEventListener("click", tempCelsius);
 
 function getCurrentLocation(position) {
   let lat = position.coords.latitude;
