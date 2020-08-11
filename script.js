@@ -43,7 +43,7 @@ function formatHours(timestamp) {
   let hour = date.getHours();
   let minute = date.getMinutes();
   if (hour < 10) {
-    hour = `0 ${minute}`;
+    hour = `0 ${hour}`;
   }
   if (minute < 10) {
     minute = `0 ${minute}`;
@@ -129,6 +129,7 @@ function getCurrentLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(showTemp);
 }
+
 function showTemp(response) {
   console.log(response);
   let temp = Math.round(response.data.main.temp);
