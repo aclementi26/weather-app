@@ -72,12 +72,6 @@ function showTemp(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  let lat = response.data.coords.latitude;
-  let lon = response.data.coords.longitude;
-  let apiKey = "c8f755d5ee590b2c42d00344493b2994";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
@@ -125,6 +119,7 @@ function submitCity(event) {
 }
 let citySearchForm = document.querySelector("#search-form");
 citySearchForm.addEventListener("submit", submitCity);
+
 function tempFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
@@ -138,6 +133,7 @@ function tempFahrenheit(event) {
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", tempFahrenheit);
+
 function tempCelsius(event) {
   event.preventDefault();
   let temp = document.querySelector("#temp");
@@ -159,6 +155,8 @@ function getCurrentLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
   axios.get(`${apiUrl}`).then(showTemp);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  axios.get(`${apiUrl}`).then(displayForecast);
 }
 
 function getLocation() {
