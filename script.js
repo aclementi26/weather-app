@@ -50,7 +50,7 @@ function formatHours(timestamp) {
   }
   return `${hour}: ${minute}`;
 }
-function displayForecast(response) {
+function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#temp");
   tempElement.innerHTML = `${temp}`;
@@ -72,6 +72,11 @@ function displayForecast(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
@@ -153,33 +158,6 @@ function getCurrentLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
   axios.get(`${apiUrl}`).then(showTemp);
-}
-
-function showTemp(response) {
-  let temp = Math.round(response.data.main.temp);
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = `${temp}`;
-  let location = response.data.name;
-  let h1 = document.querySelector("#city");
-  h1.innerHTML = `${location}`;
-  let forecast = response.data.weather[0].description;
-  let forecastElement = document.querySelector(".weatherCondition");
-  forecastElement.innerHTML = `${forecast}`;
-  let wind = Math.round(response.data.wind.speed);
-  let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `wind: ${wind} mph`;
-  let humidity = response.data.main.humidity;
-  let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `humidity: ${humidity}%`;
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 function getLocation() {
