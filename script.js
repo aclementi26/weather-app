@@ -72,10 +72,11 @@ function showTemp(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
 
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  let lat = response.data.coords.latitude;
+  let lon = response.data.coords.longitude;
+  let apiKey = "c8f755d5ee590b2c42d00344493b2994";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
