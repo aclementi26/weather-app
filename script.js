@@ -30,7 +30,7 @@ function changeDate() {
   let hour = now.getHours();
   let minute = now.getMinutes();
   if (hour < 10) {
-    hour = `0 ${minute}`;
+    hour = `0 ${hour}`;
   }
   if (minute < 10) {
     minute = `0 ${minute}`;
@@ -155,6 +155,7 @@ function getCurrentLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
   axios.get(`${apiUrl}`).then(showTemp);
+
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(displayForecast);
 }
